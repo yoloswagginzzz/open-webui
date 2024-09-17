@@ -68,6 +68,7 @@ app.state.MODELS = {}
 
 
 @app.middleware("http")
+
 async def check_url(request: Request, call_next):
     if len(app.state.MODELS) == 0:
         await get_all_models()
